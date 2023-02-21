@@ -13,6 +13,10 @@ const images = [
   },
 ];
 
+// ===============
+// Варіант №1
+// ===============
+
 // const newUrl = document.querySelector(".gallery");
 
 // images.forEach((image) => {
@@ -24,11 +28,15 @@ const images = [
 //   newUrl.appendChild(newLi);
 // });
 
+// ===============
+// Варіант №2
+// ===============
+
 const gallery = document.querySelector(".gallery");
 
 const galleryItems = images
   .map(({ url, alt }) => {
-    return `<li class="gallery-item"><img src="${url}" alt="${alt}" class="gallery-img"></li>`;
+    return `<li class="gallery-item"><img src="${url}" alt="${alt}" class="gallery-img" width = "300px"></li>`;
   })
   .join("");
 
