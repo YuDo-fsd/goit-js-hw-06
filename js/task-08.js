@@ -4,7 +4,6 @@ const users = {
 };
 
 const formEdit = document.querySelector(".login-form");
-const fieldsInput = document.querySelector("input");
 
 formEdit.addEventListener("submit", handleSubmit);
 
