@@ -1,6 +1,6 @@
 const users = {
-  login: [],
-  password: [],
+  login: "",
+  password: "",
 };
 
 const formEdit = document.querySelector(".login-form");
@@ -13,12 +13,12 @@ function handleSubmit(event) {
     elements: { email, password },
   } = event.currentTarget;
 
-  if (email.value === "" || password.value === "") {
+  if (!email.value || !password.value) {
     return alert("Будь ласка, заповніть всі поля форми!");
   }
 
-  users.login.push(email.value);
-  users.password.push(password.value);
+  users.login = email.value;
+  users.password = password.value;
 
   event.currentTarget.reset();
 }
